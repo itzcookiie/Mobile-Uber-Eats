@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="themes/123.css" />
+	<link rel="stylesheet" href="styles.POI.css">
+	<link rel="stylesheet" href="themes\jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</header>
+
+<body>
+	<nav>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="#">Home</a>
+			<a href="#">Search</a>
+			<a href="#">Profile</a>
+			<a href="#">Faviourites</a>
+		</div>
+		<div id="main">
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+		</div>
+	</nav>
+
+	<img src="IMAGES/PepperRoot.webp" width="275" height="197" class="logo" alt="" />
+	<img src="IMAGES/LogoFoodCourt.jpg" width="126" height="126" class="logo2" alt="" />
+	<h2>PIzza Town Italy </h2>
+	<div>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+	</div>
+	<h4>Casa Riva</h4>
+	<h5>122 Cannon studio, London,E14 TPS</h5>
+
+	<!-- FOOOD----------------------------------------------------------------------------------------------------------------------->
+
+	<a href="#popupLogin" data-rel="popup" data-position-to="window"
+		class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a"
+		data-transition="pop">The Chef
+	</a>
+
+	<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+		<form>
+			<div style="padding:10px 20px;">
+				<p>
+				<div class="Images"> <img src="IMAGES/chef.jpg" width="200" height="200" alt="" /></div>
+				Chef Orlando creates finger licking bbq meat dishes <br>with a side to complete your meal, his well
+				known
+				<br> ingredients creates a traditional brazillian taste.
+			</div>
+	    </form>
+	</div>
+	       
+	<div data-role="collapsible">
+		<h3>Steak</h3>
+
+		<h3> Steak De Brazil</h3>
+		<div class="ui-body ui-body-a">
+			<p class="price">£25</p>
+			<div class="Images"> 
+				<img src="IMAGES/classic-italian-pasta-salad-recipe-4-of-6.jpg" width="200"height="200" clas="chef" alt="">
+			</div>
+			<p>
+			Cut from the striploin and served on the bone - this cut is an exceptional treat for steak lovers. It’s
+			beautifully tender and characterised by a fine layer of fat that runs along the bone, producing a rich and
+			mature flavour. Recommended medium rare
+			</p>
+			<br>
+			<h3>Ingredient: </h3>
+			Paprika, Black Pepper, Ginger, Oil, Chilli powder, green chillies, chillie flakes <br><br>
+			Calories<br>
+			<br>
+			<h4>Calories: 600</h4>
+		</div>
+	</div>
+
+	<div data-role="collapsible">
+		<h3>Skewers</h3>
+		<div class="ui-body ui-body-a">
+			<h3>Skews Orlando</h3>
+			<p class="price">£15</p>
+			<div class="Images">
+				<img src="IMAGES/bol.jpg" width="200" height="200" clas="chef" alt="">
+			</div>
+			<p>Two full charcoal grilled skewers of your choice served with salad and a choice of chips or rice.</p>
+			<form>
+				<fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
+					<legend>Choose one choice:</legend>
+					<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="checked">
+					<label for="radio-choice-h-2a">Chips</label>
+					<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
+					<label for="radio-choice-h-2b">Rice</label>
+				</fieldset>
+			</form>
+			<br>
+			<h3>Ingredient: </h3>
+			<p>Sweet Peppers, BBQ Sauce, Ginger, Oil, Chilli powder</p>
+			<br><br>
+			<h4>Calories: 400</h4>
+		</div>
+	</div>
+
+	<div data-role="collapsible">
+		<h3>Ribs</h3>
+		<div class="ui-body ui-body-a">
+			<h3> Soul 'n' Ribs </h3>
+			<p class="price">£18</p>
+			<div class="Images"> 
+				<img src="IMAGES/pizza.jpg" width="200" height="200" class="chef" alt="">
+			</div>
+			<p>Cooked low and slow for 8 hours, then flame grilled with our home-made signature BBQ basting and Jack Daniel BBQ sauce.</p>
+			<br>
+			<h3>Ingredient: </h3>
+			<p>olive oil, red chilli, ginger, garlic, apple juice, white wine vinegar, Dijon mustard, soy sauce, brown sugar</p>
+			<br><br>
+			<h4>Calories: 600</h4>
+		</div>
+	</div>
+
+	<div data-role="collapsible">
+		<h3> Burgers </h3>
+		<div class="ui-body ui-body-a">
+			<h3> Gunga pasta</h3>
+			<p class="price">£15</p>
+			<div class="Images"> <img src="IMAGES/greenpasta.jpg" width="200" height="200" clas="chef" alt=""></div>
+			<p>This amazinng meatball pasta is filled with some fresh spring onions, garlic and
+			ginger to give an authentic the famous inalian home flavour. Served with a large<br>
+			portion of cheese and cake..</p>
+			<form>
+				<fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
+					<legend>Choose one pasta choice:</legend>
+					<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2m" value="on" checked="checked">
+					<label for="radio-choice-h-2m">fresh</label>
+					<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2n" value="off">
+					<label for="radio-choice-h-2n">homegrown</label>
+
+				</fieldset>
+			</form>
+			<br>
+			<h3>Ingredient: </h3>
+			<p>Garlic, Onion, lime,chili,cucumber,green leaves Tomatoe, rice, Chilli powder, Meat</p>
+			<br><br>
+			<h4>Calories: 600</h4>
+		</div>
+	</div>
+
+	<div data-role="collapsible">
+		<h3>Salad</h3>
+		<p>I'm the collapsible content for section 3</p>
+		<div class="ui-body ui-body-a">
+			<h3>Salad</h3>
+			<p class="price">£15</p>
+			<div class="Images"> 
+				<img src="IMAGES/classic-italian-pasta-salad-recipe-4-of-6.jpg" width="200"height="200" clas="chef" alt="">
+			</div>
+			<p>TOne of a kind famous salad filled with love and joy just like Rome!</p>
+			<form>
+				<fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
+					<legend>Choose one pasta choice:</legend>
+					<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2m" value="on" checked="checked">
+					<label for="radio-choice-h-2m">fresh</label>
+					<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2n" value="off">
+					<label for="radio-choice-h-2n">homegrown</label>
+
+				</fieldset>
+			</form>
+			<br>
+			<h3>Ingredient: </h3>
+			<p>Garlic, Onion,cucumber,salad suace, chili, garlic, red peppers, ham,sugar</p>
+			<br><br>
+			<h4>Calories: 600</h4>
+		</div>
+	</div>
+</div>
+	<!-- FOOOD----------------------------------------------------------------------------------------------------------------------->
+	<footer data-role="footer" data-position="fixed">
+		<h1>Epicure</h1>
+	</footer>
+</body>
+<script>
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "250px";
+		document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+	}
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("main").style.marginLeft = "0";
+		document.body.style.backgroundColor = "white";
+	}
+</script>
+</html>

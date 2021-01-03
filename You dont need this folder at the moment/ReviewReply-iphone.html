@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+	.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+	
+	
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+	
+</style>
+	
+	<link rel="stylesheet" href="C:\Users\hamza\Documents\hamza cw\themes/123.css" />
+  <link rel="stylesheet" href="C:\Users\hamza\Documents\hamza cw\themes\jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+	
+	</script> 
+	
+
+	
+	<nav>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Search</a>
+  <a href="#">User</a>
+	<a href="#">Faviourites</a>
+</div>
+
+<div id="main">
+ 
+	
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+	
+	
+</script>
+		
+	</nav>
+
+	
+	
+	
+	
+	
+		
+	
+	
+	<body>
+
+  <br />
+		
+		  <div class="column">
+  <img src="../webapp/ham/logo.png" width="450" height="153" class="logo" alt=""/>
+  <h2 align="center"><a href="#">Reply To Review</a></h2>
+  <br /><d/div>
+
+	
+		<p><h3> James:</h3> This is the worst resturant in history, the food was terrible but fast service from
+		epicure.</p>
+<button class="replybutton" data-commentbox="panel1">Reply</button><br/><br/>
+
+<div class="replybox" id="panel1" style="display:none">
+<textarea cols="35" rows="8"></textarea><br/>
+<button class="cancelbutton">Cancel</button><br/><br/>
+</div>
+
+
+<br/><br/>
+<hr>
+
+<p><h3>Hammy:</h3> This food was amzing, great service from epicure, will be back again soon.</p>
+<button class="replybutton" data-commentbox="panel2">Reply</button><br/><br/>
+
+<div class="replybox" style="display:none" id="panel2">
+<textarea cols="35" rows="8"></textarea><br/>
+<button class="cancelbutton">Cancel</button><br/><br/>
+</div>
+<br/><br/>
+<hr>
+
+<p><h3>Ajaymatapuriska Singh</h3> JUST WOW, I have nothing else to say</p>
+<button class="replybutton" data-commentbox="panel3">Reply</button><br/><br/>
+
+<div class="replybox" style="display:none" id="panel3">
+<textarea cols="35" rows="8"></textarea><br/>
+<button class="cancelbutton">Cancel</button><br/><br/>
+</div>
+<br/><br/>
+<hr>
+
+
+
+
+<br/><br/>
+		
+		
+		<script>
+$(function() {
+
+$('.replybutton').on('click', function() {
+$('.replybox').hide();
+var commentboxId= $(this).attr('data-commentbox');
+$('#'+commentboxId).toggle();
+});
+
+$('.cancelbutton').on('click', function() {
+$('.replybox').hide();
+});
+
+});
+</script> 
+
+	
+   
+</body>
+	
+	
+	
+            <footer data-role="footer" data-position="fixed">	
+  <h1>Epicure</h1>
+	
+		
+		
+		
+	</footer>
+	
+	
+</html>
+

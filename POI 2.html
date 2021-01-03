@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!------------------------------------STYLE SHEET -------------------------------------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.POI.css">
+<link rel="stylesheet" href="themes/123.css" />
+<link rel="stylesheet" href="themes\jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+
+</script>
+
+
+
+<!------------------------------------NAV BAR -------------------------------------->
+
+<nav>
+
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#">Home</a>
+		<a href="#">Search</a>
+		<a href="#">User</a>
+		<a href="#">Faviourites</a>
+	</div>
+
+	<div id="main">
+
+
+		<!------------------------------------NAV BAR FUCTION FOR POP UP  -------------------------------------->
+
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+	</div>
+
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("main").style.marginLeft = "250px";
+			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft = "0";
+			document.body.style.backgroundColor = "white";
+		}
+
+	</script>
+</nav>
+
+
+<!-- The header----------------------------------------------------------------------------------------------------------------------->
+
+<header>
+	<!-- Header Image and The small shop icon logo---------------------->
+
+	<img src="IMAGES/jerk.jpg" width="275" height="197" class="logo" align="Center" alt="" />
+	<img src="IMAGES/GoodFoodLogo.jpg" width="126" height="126" class="logo2" alt="" />
+
+	<h2 align="center">Good Jerk Food </h2> <!--   title for the resturant name --->
+
+
+	<!-- star rating --->
+	<div align="center">
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+		<!--NOT CHECK SO = TO 3 STARS --->
+		<span class="fa fa-star"></span>
+
+		<h4 align="center">Caribbean Cuisne</h4>
+
+		<!--   USE ALIGN TO EEP TEXT IN THE MIDDLE--->
+		<h5 align="center">22 Penton Street, London, N1 9PS</h5>
+
+</header>
+
+
+<!-- Header----------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+<body>
+	<!-- FOOOD----------------------------------------------------------------------------------------------------------------------->
+
+
+	<!--POPUP CODE FOR THE CHEF  --->
+	<a href="#popupLogin" data-rel="popup" data-position-to="window"
+		class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a"
+		data-transition="pop">The Chef</a>
+	<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+
+		<!-- HEADER FOR THE RESTURANT --->
+		<h3 align="center"> Caribbean Nation </h3>
+		<div class="ui-body ui-body-a">
+			<!--  DESCRIPTION OF THE CHEF  AND ITS IMAGE OF CHEF --->
+			<p>
+			<div class="Images" align="center"> <img src="IMAGES/chef2.jpg" width="200" height="200" alt="" /></div>
+			A local of St. Lucia, Nina Compton has prepared in French, Caribbean and Italian kitchens. She has worked
+			under prestigious Chef Daniel Boulud and now lives in Miami where she worked for acclaimed chef Scott
+			Conant. A self-declared “gnocchi ruler,” Nina dependably keeps Maldon salt, great olive oil, lemon,
+			calabrese chilies, and either pancetta or guanciale close by.
+			</p>
+		</div>
+	</div>
+
+
+	<div data-role="collapsible">
+		<h3>Jerk chicken</h3>
+		<!--JERK CHCIKEN HEADER --->
+
+		<p>
+		<h3></h3>
+		<p class="price">£15</p> <!-- CLASS IS = TO IMAGES SO CAN EDIT IN CSS --->
+		<p>
+		<div class="Images"> <img src="IMAGES/jerk.jpg" width="200" height="200" clas="chef" alt=""></div>
+		This amazinng jerk chicken is cooked for 2, with succulent jucies and fresh herbs. Caribbean cuisine is an
+		exciting fusion of culinary influences from all over the world.
+		<br>
+		<h3>Ingredient: </h3>
+		Capturing the flavours of the Caribbean most recipes champion locally grown ingredients like tropical fruits,
+		rice, plantains, beans, cassava, sweet potatoes, coconut, and various meats like beef, poultry, pork and seafood
+		given a lift with garlic, onions, scotch bonnet peppers, celery, green onions, and herbs like cilantro,
+		marjoram, rosemary, tarragon and thyme.
+		<br>
+		<!-- H4 BOLD TEXT FOR CALORIES --->
+		<h4>Calories: 600</h4>
+
+		<!-- RADIO BUTTONS FOR OPTION OF FOD--------------------------------------------------------------------------------------->
+		<form>
+			    <fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
+				        <legend>Flavour:</legend>
+				        <input type="radio" name="radio-choice-t-6" id="radio-choice-t-6a" value="on" checked="checked">
+				        <label for="radio-choice-t-6a">Jerk</label>
+				        <input type="radio" name="radio-choice-t-6" id="radio-choice-t-6b" value="off">
+				        <label for="radio-choice-t-6b">Spicy</label>
+				        <input type="radio" name="radio-choice-t-6" id="radio-choice-t-6c" value="other">
+				        <label for="radio-choice-t-6c">Mild</label>
+				    </fieldset>
+		</form>
+		<!-- ADD TO BASKET ANS FAV CODE ----------------------------------------------------------------------------------------------->
+		<a href="" rel="external"><input type="button" data-inline="true" value="Add to basket" data-theme="b"></a> <a
+			href="" rel="external"><input type="button" data-inline="true" value="Add to Favourites" data-theme="b"></a>
+	</div>
+	</div>
+
+	</div>
+	</p>
+	</p>
+	</div>
+	<!-- CODE IS FINSHED FOR FIRST DISH --->
+
+	<!-- DISH -------------------------------------------DISH------------------DISH---------------------------------------->
+
+	<div data-role="collapsible">
+		<h3>Pepperroot</h3>
+
+		<div class="ui-body ui-body-a">
+
+			<h3> Pepperroot</h3>
+			<p class="price">£15</p>
+			<p>
+			<div class="Images"> <img src="IMAGES/PepperRoot.webp" width="222" height="140" clas="chef" alt=""></div>
+			Simmered in huge pots across the Caribbean, this thick and rich stew can include aubergine, okra, squash,
+			potatoes and pretty much anything else that grows in the islands’ rich earth. Beef is the most common meat,
+			while fungi – tasty cornmeal dumplings – add texture. It’s called souse in the Bahamas, which may refer to
+			the condition of the cook given that no two recipes or even batches are alike.
+			<br>
+			<h3>Ingredient: </h3>
+			Garlic, Onion, Tomatoe, rice, Chilli powder,Meat<br>
+			<br>
+			<h4>Calories: 600</h4>
+		</div>
+
+		</p>
+
+	</div>
+	</div>
+
+
+
+
+
+	<!-- DISH -------------------------------------------DISH------------------DISH---------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+	<div data-role="collapsible">
+		<h3>Plantain</h3>
+
+
+
+		<div class="ui-body ui-body-a">
+
+
+
+			<h3> Plantain</h3>
+			<p class="price">£35</p>
+			<p>
+			<div class="Images"> <img src="IMAGES/plantains.jpg" width="200" height="200" clas="chef" alt=""></div>
+			Looks like a banana but certainly doesn’t taste like one. This staple is devoured all over the Caribbean, it
+			is fried or cooked as a delicious side or snack. Plantain is much starchier than bananas but has a sweet
+			flavour which is perfect alongside any Caribbean food.
+			</p>
+
+
+
+			<br>
+			<h3>Ingredient: </h3>
+
+			Olive oil 6 tsps.
+			grated Mozzarella cheese 1 1/3 cup
+			grated Parmesan cheese ¼ cup
+			Roma tomatoes (cut into ¼ inch thick slices) 2
+			clove garlic (minced) 1<br>
+			<br>
+			<h4>Calories: 600</h4>
+		</div>
+
+	</div>
+	</div>
+
+
+	<!-- DISH -------------------------------------------DISH------------------DISH---------------------------------------->
+
+
+
+
+
+
+	<div data-role="collapsible">
+		<h3> Rice and peas </h3>
+		<div class="ui-body ui-body-a">
+
+
+			<p>
+			<h3>Rice and peas </h3>
+			<p class="price">£15</p>
+			<p>
+			<div class="Images"> <img src="IMAGES/rice-and-peas-a1ee316.jpg" width="200" height="200" clas="chef"
+					alt=""></div>
+			Anyone who is nervous about trying foreign food will love rice and peas. Simple and comforting Rice ‘n’ peas
+			is a popular dish all over the Caribbean. With no two dishes the same every family thinks they have the best
+			recipe. The rice is boiled with coconut milk giving it a fluffy sweet texture. Best served with chicken with
+			a kick to complement its sweet flavour.
+			</p>
+
+
+
+
+			<br>
+			<h3>Ingredient: </h3>
+			Garlic, Onion,, lime,chili,cucumber,green leaves Tomatoe, rice, Chilli powder,peas<br>
+			<br>
+			<h4>Calories: 600</h4>
+		</div>
+		</p>
+
+	</div>
+	</div>
+
+	</p>
+
+	</div>
+	</div>
+
+
+
+	<!-- DISH -------------------------------------------DISH------------------DISH---------------------------------------->
+
+
+	<div data-role="collapsible">
+		<h3>Callaloo</h3>
+		<p>I'm the collapsible content for section 3</p>
+
+
+
+
+		<div class="ui-body ui-body-a">
+
+
+
+			<h3>Callaloo</h3>
+			<p class="price">£5</p>
+			<p>
+			<div class="Images"> <img src="IMAGES/call.jpg" width="200" height="200" clas="chef" alt=""></div>
+			Often confused, Callaloo is the name of the dish and the ingredient. Callallo is a leafy stew made with
+			Callaloo (a leafy vegetable); it’s the Caribbean’s version of pesto! Leafy greens (you can use spinach) are
+			boiled with peppers, onion and okra then served as a side dish with seafood or meat.
+			</p>
+
+
+			<form>
+				<fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
+					<legend>Choose one pasta choice:</legend>
+					<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2m" value="on" checked="checked">
+					<label for="radio-choice-h-2m">fresh</label>
+					<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2n" value="off">
+					<label for="radio-choice-h-2n">homegrown</label>
+
+				</fieldset>
+			</form>
+
+			<br>
+			<h3>Ingredient: </h3>
+			450g callaloo or spinach leaves
+			1.5L chicken stock
+			1 onion, chopped
+			225g salt beef, fat removed and diced
+			1/2 teaspoon ground black peppe<br>
+			<br>
+			<h4>Calories: 600</h4>
+		</div>
+
+	</div>
+	</div>
+	<!---------------------------------------------- FOOOD SECTION END--------------------------------------------------------------------------------->
+</body>
+
+
+
+<footer data-role="footer" data-position="fixed">
+	<h1>Epicure</h1>
+
+
+
+
+</footer>
+
+
+</html>
