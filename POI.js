@@ -1,3 +1,7 @@
+const favourites = [];
+const addToBasketBtns = document.querySelectorAll('.add-to-basket');
+const addToFavsBtns = document.querySelectorAll('.add-to-favourites');
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -7,4 +11,28 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.body.style.backgroundColor = "white";
+}
+
+[...addToFavsBtns].forEach(addToFavBtn => {
+    addToFavBtn.addEventListener('click', favouriteItem);
+})
+
+function favouriteItem(event) {
+    const storedFavs = localStorage.getItem('favs')
+    if(storedFavs) {
+        const parseFavs = JSON.parse(storedFavs);
+        favourites.push(...parseFavs)
+    } 
+    const parentDiv = event.target.parentNode;
+    const foodName = parentDiv.querySelector('.food-name').innerText;
+    const foodImage = parentDiv.querySelector('img').src;
+    const foodPrice = parentDiv.querySelector('.price').innerText;
+    const foodData = {
+        food: foodName,
+        price: foodPrice,
+        image: foodImage
+    };
+    favourites.push(foodData);
+    const JSONFavourites = JSON.stringify(favourites);
+    localStorage.setItem('favs', JSONFavourites)
 }

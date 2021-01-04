@@ -1,0 +1,44 @@
+.favourites-ui {
+    margin-bottom: 50px;
+}
+
+.favourites-name {
+    margin: 0;
+}
+
+.favourites {
+    display: flex;
+}
+
+.food-image, .food-details {
+    flex: 1;
+}
+
+.food-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-name {
+    font-size: 20px;
+}
+
+.quantity {
+    display: flex;
+}
+
+.quantity-text {
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+}
+
+.options > button {
+    flex: 1;
+}
