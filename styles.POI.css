@@ -76,3 +76,7 @@ body {
 .checked {
     color: orange;
 }
+
+.center {
+    text-align: center;
+}
