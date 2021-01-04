@@ -2,109 +2,76 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!------------------------------------STYLE SHEET -------------------------------------->
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="styles.POI.css">
-<link rel="stylesheet" href="themes/123.css" />
-<link rel="stylesheet" href="themes\jquery.mobile.icons.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
-
-</script>
-
-
-
-<!------------------------------------NAV BAR -------------------------------------->
-
-<nav>
-
-	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">Home</a>
-		<a href="#">Search</a>
-		<a href="#">User</a>
-		<a href="#">Faviourites</a>
-	</div>
-
-	<div id="main">
-
-
-		<!------------------------------------NAV BAR FUCTION FOR POP UP  -------------------------------------->
-
-		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-	</div>
-
-	<script>
-		function openNav() {
-			document.getElementById("mySidenav").style.width = "250px";
-			document.getElementById("main").style.marginLeft = "250px";
-			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-		}
-
-		function closeNav() {
-			document.getElementById("mySidenav").style.width = "0";
-			document.getElementById("main").style.marginLeft = "0";
-			document.body.style.backgroundColor = "white";
-		}
-
-	</script>
-</nav>
-
-
-<!-- The header----------------------------------------------------------------------------------------------------------------------->
-
-<header>
-	<!-- Header Image and The small shop icon logo---------------------->
-
-	<img src="IMAGES/jerk.jpg" width="275" height="197" class="logo" align="Center" alt="" />
-	<img src="IMAGES/GoodFoodLogo.jpg" width="126" height="126" class="logo2" alt="" />
-
-	<h2 align="center">Good Jerk Food </h2> <!--   title for the resturant name --->
-
-
-	<!-- star rating --->
-	<div align="center">
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star"></span>
-		<!--NOT CHECK SO = TO 3 STARS --->
-		<span class="fa fa-star"></span>
-
-		<h4 align="center">Caribbean Cuisne</h4>
-
-		<!--   USE ALIGN TO EEP TEXT IN THE MIDDLE--->
-		<h5 align="center">22 Penton Street, London, N1 9PS</h5>
-
-</header>
-
-
-<!-- Header----------------------------------------------------------------------------------------------------------------------->
-
-
-
-
-
-
-
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles.POI.css">
+	<link rel="stylesheet" href="themes/123.css" />
+	<link rel="stylesheet" href="themes\jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
 
 <body>
+	<!------------------------------------NAV BAR -------------------------------------->
+	<nav>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="#">Home</a>
+			<a href="#">Search</a>
+			<a href="#">Profile</a>
+			<a href="#">Faviourites</a>
+		</div>
+		<div id="main">
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+		</div>
+	</nav>
+
+	<!-- The header----------------------------------------------------------------------------------------------------------------------->
+
+	<header>
+		<!-- Header Image and The small shop icon logo---------------------->
+
+		<img src="IMAGES/jerk.jpg" width="275" height="197" class="logo" alt="" />
+		<img src="IMAGES/GoodFoodLogo.jpg" width="126" height="126" class="logo2" alt="" />
+
+		<h2>Good Jerk Food </h2> <!--   title for the resturant name --->
+
+
+		<!-- star rating --->
+		<div>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<!--NOT CHECK SO = TO 3 STARS --->
+			<span class="fa fa-star"></span>
+
+			<h4>Caribbean Cuisne</h4>
+
+			<!--   USE ALIGN TO EEP TEXT IN THE MIDDLE--->
+			<h5>22 Penton Street, London, N1 9PS</h5>
+
+	</header>
+
+
+	<!-- Header----------------------------------------------------------------------------------------------------------------------->
+	
+
 	<!-- FOOOD----------------------------------------------------------------------------------------------------------------------->
 
-
 	<!--POPUP CODE FOR THE CHEF  --->
-	<a href="#popupLogin" data-rel="popup" data-position-to="window"
-		class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a"
-		data-transition="pop">The Chef</a>
+	<a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop">
+		The Chef
+	</a>
 	<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
 
 		<!-- HEADER FOR THE RESTURANT --->
-		<h3 align="center"> Caribbean Nation </h3>
+		<h3> Caribbean Nation </h3>
 		<div class="ui-body ui-body-a">
 			<!--  DESCRIPTION OF THE CHEF  AND ITS IMAGE OF CHEF --->
 			<p>
-			<div class="Images" align="center"> <img src="IMAGES/chef2.jpg" width="200" height="200" alt="" /></div>
+			<div class="Images"> <img src="IMAGES/chef2.jpg" width="200" height="200" alt="" /></div>
 			A local of St. Lucia, Nina Compton has prepared in French, Caribbean and Italian kitchens. She has worked
 			under prestigious Chef Daniel Boulud and now lives in Miami where she worked for acclaimed chef Scott
 			Conant. A self-declared “gnocchi ruler,” Nina dependably keeps Maldon salt, great olive oil, lemon,
