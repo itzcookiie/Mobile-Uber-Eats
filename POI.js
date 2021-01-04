@@ -1,4 +1,3 @@
-const favourites = [];
 const addToBasketBtns = document.querySelectorAll('.add-to-basket');
 const addToFavsBtns = document.querySelectorAll('.add-to-favourites');
 
@@ -13,16 +12,13 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 
-[...addToFavsBtns].forEach(addToFavBtn => {
-    addToFavBtn.addEventListener('click', favouriteItem);
-})
+[...addToFavsBtns].forEach(addToFavBtn => addToFavBtn.addEventListener('click', favouriteItem));
+
+[...addToBasketBtns].forEach(addToBasketBtn => addToBasketBtn.addEventListener('click', addToBasket));
 
 function favouriteItem(event) {
     const storedFavs = localStorage.getItem('favs')
-    if(storedFavs) {
-        const parseFavs = JSON.parse(storedFavs);
-        favourites.push(...parseFavs)
-    } 
+    const parsedFavs = storedFavs ? JSON.parse(storedFavs) : [];
     const parentDiv = event.target.parentNode;
     const foodName = parentDiv.querySelector('.food-name').innerText;
     const foodImage = parentDiv.querySelector('img').src;
@@ -32,7 +28,25 @@ function favouriteItem(event) {
         price: foodPrice,
         image: foodImage
     };
-    favourites.push(foodData);
-    const JSONFavourites = JSON.stringify(favourites);
-    localStorage.setItem('favs', JSONFavourites)
+    parsedFavs.push(foodData);
+    const JSONFavourites = JSON.stringify(parsedFavs);
+    localStorage.setItem('favs', JSONFavourites);
+}
+
+function addToBasket(event) {
+    const storedBasket = localStorage.getItem('basket')
+    const parsedBasket = storedBasket ? JSON.parse(storedBasket) : [];
+    const parentDiv = event.target.parentNode;
+    const foodName = parentDiv.querySelector('.food-name').innerText;
+    const foodImage = parentDiv.querySelector('img').src;
+    const foodPrice = parentDiv.querySelector('.price').innerText;
+    const foodData = {
+        food: foodName,
+        price: foodPrice.slice(1),
+        image: foodImage
+    };
+    parsedBasket.push(foodData);
+    console.log(parsedBasket)
+    const JSONBasket = JSON.stringify(parsedBasket);
+    localStorage.setItem('basket', JSONBasket);
 }

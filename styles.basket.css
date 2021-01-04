@@ -1,0 +1,55 @@
+.basket-title {
+    margin-bottom: 50px;
+}
+
+.basket-item-container {
+    overflow: scroll;
+    height: 66vh;
+}
+
+.basket-item {
+    display: flex;
+    padding: 10px;
+}
+
+.basket-item > div {
+    flex: 1;
+}
+
+.basket-food {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.basket-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.basket-checkout {
+    position: fixed;
+    bottom: 0;
+}
+
+.basket-total {
+    display: flex;
+    justify-content: space-around;
+}
+
+.basket-total-container {
+    display: grid;
+    grid-template-areas: 'totalText totalText totalText . . . totalNumber totalNumber totalNumber';
+    padding: 10px;
+    font-size: 20px;
+}
+
+.basket-total-text {
+    grid-area: totalText
+}
+
+.basket-total {
+    grid-area: totalNumber
+}

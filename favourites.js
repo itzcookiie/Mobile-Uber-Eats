@@ -38,8 +38,6 @@ function displayFavourites() {
                 </div>
             </div>
             `
-
-            
             favsContainer.appendChild(favsUI);
         })
     }
