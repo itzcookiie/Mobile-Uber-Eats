@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.POI.css">
 	<link rel="stylesheet" href="styles.favourites.css">
 	<link rel="stylesheet" href="themes/123.css" />
 	<link rel="stylesheet" href="themes\jquery.mobile.icons.min.css" />
@@ -15,76 +16,26 @@
 	<nav>
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="#">Home</a>
-			<a href="#">Search</a>
-			<a href="#">Profile</a>
-			<a href="#">Favourites</a>
+			<a rel="external" href="#">Home</a>
+			<a rel="external" href="#">Search</a>
+			<a rel="external" href="#">Profile</a>
+			<a rel="external" href="#">Favourites</a>
+			<a rel="external" href="./basket.html">Basket</a>
 		</div>
 		<div id="main">
-			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+            <a rel="external" href="./basket.html">
+				<img class="basket-logo" src="./themes/images/icons-png/shop-black.png" />
+			</a>
 		</div>
     </nav>
     
     <h2>Your Favourites</h2>
+    <button class="clear-button">Clear</button>
 
     <div id="favourites-container">
         
     </div>
-
-    <!-- <div class="favourites-ui">
-        <div class="favourites">
-            <div class="food-image">
-                <div class="Images"> 
-                    <img src="IMAGES/classic-italian-pasta-salad-recipe-4-of-6.jpg" width="200"height="200" clas="chef" alt="">
-                </div>
-            </div>
-            <div class="food-details">
-                <p class="food-name">Steak de Brazil</p>
-                <div class="quantity">
-                    <p class="quantity-text">Qty: </p>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="options">
-            <button>Add to basket</button>
-            <button>Remove</button>
-            <button>Email</button>
-        </div>
-    </div>
-
-    <div class="favourites-ui">
-        <div class="favourites">
-            <div class="food-image">
-                <div class="Images"> 
-                    <img src="IMAGES/bol.jpg" width="200"height="200" clas="chef" alt="">
-                </div>
-            </div>
-            <div class="food-details">
-                <p class="food-name">Skews Orlando</p>
-                <div class="quantity">
-                    <p class="quantity-text">Qty: </p>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="options">
-            <button>Add to basket</button>
-            <button>Remove</button>
-            <button>Email</button>
-        </div>
-    </div> -->
-
-
-
 	<!-- FOOOD----------------------------------------------------------------------------------------------------------------------->
 
 	<!-- FOOOD----------------------------------------------------------------------------------------------------------------------->
@@ -92,6 +43,5 @@
 		<h1>Epicure</h1>
 	</footer>
 </body>
-<script src="./POI.js"></script>
 <script src="./favourites.js"></script>
 </html>

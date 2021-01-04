@@ -3,7 +3,6 @@ const addToFavsBtns = document.querySelectorAll('.add-to-favourites');
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 function closeNav() {
@@ -43,10 +42,10 @@ function addToBasket(event) {
     const foodData = {
         food: foodName,
         price: foodPrice.slice(1),
-        image: foodImage
+        image: foodImage,
+        quantity: 1
     };
     parsedBasket.push(foodData);
-    console.log(parsedBasket)
     const JSONBasket = JSON.stringify(parsedBasket);
     localStorage.setItem('basket', JSONBasket);
 }

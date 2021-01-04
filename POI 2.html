@@ -17,13 +17,17 @@
 	<nav>
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="#">Home</a>
-			<a href="#">Search</a>
-			<a href="#">Profile</a>
-			<a href="#">Favourites</a>
+			<a rel="external" href="#">Home</a>
+			<a rel="external" href="#">Search</a>
+			<a rel="external" href="#">Profile</a>
+			<a rel="external" href="./favourites.html">Favourites</a>
+			<a rel="external" href="./basket.html">Basket</a>
 		</div>
 		<div id="main">
 			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+			<a rel="external" href="./basket.html">
+				<img class="basket-logo" src="./themes/images/icons-png/shop-black.png" />
+			</a>
 		</div>
 	</nav>
 
@@ -31,26 +35,27 @@
 
 	<header>
 		<!-- Header Image and The small shop icon logo---------------------->
-
-		<img src="IMAGES/jerk.jpg" width="275" height="197" class="logo center" alt="" />
-		<img src="IMAGES/GoodFoodLogo.jpg" width="126" height="126" class="logo2 center" alt="" />
-
-		<h2 class="center">Good Jerk Food </h2> <!--   title for the resturant name --->
-
-
-		<!-- star rating --->
-		<div class="center">
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<!--NOT CHECK SO = TO 3 STARS --->
-			<span class="fa fa-star"></span>
-
-			<h4 class="center">Caribbean Cuisne</h4>
-
-			<!--   USE ALIGN TO EEP TEXT IN THE MIDDLE--->
-			<h5 class="center">22 Penton Street, London, N1 9PS</h5>
+		<div class="restaurant">
+			<img src="IMAGES/jerk.jpg" width="275" height="197" class="logo center" alt="" />
+			<img src="IMAGES/GoodFoodLogo.jpg" width="126" height="126" class="logo2 center" alt="" />
+	
+			<h2 class="center">Good Jerk Food </h2> <!--   title for the resturant name --->
+	
+	
+			<!-- star rating --->
+			<div class="center">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+				<!--NOT CHECK SO = TO 3 STARS --->
+				<span class="fa fa-star"></span>
+	
+				<h4 class="center">Caribbean Cuisne</h4>
+	
+				<!--   USE ALIGN TO EEP TEXT IN THE MIDDLE--->
+				<h5 class="center">22 Penton Street, London, N1 9PS</h5>
+		</div>
 
 	</header>
 
@@ -82,8 +87,9 @@
 
 
 	<div data-role="collapsible">
-		<h3 class="food-name">Jerk chicken</h3>
+		<h3 class="food-type">Jerk chicken</h3>
 		<!--JERK CHCIKEN HEADER --->
+		<h3 class="food-name">Jerk chicken</h3>
 		<p class="price">£15</p> 
 		<!-- CLASS IS = TO IMAGES SO CAN EDIT IN CSS --->
 		<div class="Images"> 
@@ -118,8 +124,8 @@
 				    </fieldset>
 		</form>
 		<!-- ADD TO BASKET ANS FAV CODE ----------------------------------------------------------------------------------------------->
-		<a href="" rel="external"><input type="button" data-inline="true" value="Add to basket" data-theme="b"></a> <a
-			href="" rel="external"><input type="button" data-inline="true" value="Add to Favourites" data-theme="b"></a>
+		<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-basket">Add to basket</button>
+		<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-favourites">Add to favourites</button>
 	</div>
 
 	<!-- CODE IS FINSHED FOR FIRST DISH --->
@@ -143,6 +149,8 @@
 			<p>Garlic, Onion, Tomatoe, rice, Chilli powder,Meat</p>
 			<br><br>
 			<h4>Calories: 600</h4>
+			<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-basket">Add to basket</button>
+			<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-favourites">Add to favourites</button>
 		</div>
 	</div>
 
@@ -170,6 +178,8 @@
 			</p>
 			<br><br>
 			<h4>Calories: 600</h4>
+			<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-basket">Add to basket</button>
+			<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-favourites">Add to favourites</button>
 		</div>
 	</div>
 
@@ -192,6 +202,8 @@
 			<p>Garlic, Onion,, lime,chili,cucumber,green leaves Tomatoe, rice, Chilli powder,peas</p>
 			<br><br>
 			<h4>Calories: 600</h4>
+			<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-basket">Add to basket</button>
+			<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-favourites">Add to favourites</button>
 		</div>
 	</div>
 
@@ -227,6 +239,8 @@
 			1/2 teaspoon ground black pepper</p>
 			<br><br>
 			<h4>Calories: 600</h4>
+			<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-basket">Add to basket</button>
+			<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-favourites">Add to favourites</button>
 		</div>
 	</div>
 	<!---------------------------------------------- FOOOD SECTION END--------------------------------------------------------------------------------->

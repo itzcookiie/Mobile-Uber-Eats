@@ -1,0 +1,44 @@
+.checkout {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout > div {
+    padding: 15px;
+    margin-bottom: 5px;
+    background-color: white;
+}
+
+.delivery-details-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.checkout form .ui-input-text {
+    display: none;
+}
+
+.order-summary-list {
+    padding: 0;
+}
+
+.order-summary-list p {
+    margin: 0;
+}
+
+.order-summary-list li{
+    list-style-type: none;
+    height: 25px;
+    font-size: 15px;
+}
+
+.checkout-list-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-total-container {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+}

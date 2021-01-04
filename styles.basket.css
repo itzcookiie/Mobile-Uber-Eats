@@ -1,3 +1,7 @@
+.basket {
+    padding: 15px;
+}
+
 .basket-title {
     margin-bottom: 50px;
 }
@@ -9,14 +13,10 @@
 
 .basket-item {
     display: flex;
-    padding: 10px;
-}
-
-.basket-item > div {
-    flex: 1;
 }
 
 .basket-food {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,16 +40,7 @@
 }
 
 .basket-total-container {
-    display: grid;
-    grid-template-areas: 'totalText totalText totalText . . . totalNumber totalNumber totalNumber';
-    padding: 10px;
+    display: flex;
     font-size: 20px;
-}
-
-.basket-total-text {
-    grid-area: totalText
-}
-
-.basket-total {
-    grid-area: totalNumber
+    justify-content: space-between;
 }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	
+  <link rel="stylesheet" href="C:\Users\bless\Desktop\New folder\themes/123.css" />
+  <link rel="stylesheet" href="C:\Users\bless\Desktop\New folder\themes\jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"> </script>
+  <script src="https://checkout.stripe.com/checkout.js"> </script>
+  <link rel="stylesheet" href="style.css" />
+  
+ 	<nav>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html" rel="external">Home</a>
+  <a href="search.html" rel="external">Search</a>
+   <a href="profile.html" rel="external">Profile</a>
+  <a href="favourites.html" rel="external">Favourites</a>
+  <a href="#">Orders</a>
+</div>
+
+<div id="main">
+ 
+	
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+	
+	
+</script>
+		
+	</nav>
+
+	
+	
+	
+	<body>
+
+  
+   <img src="logoHeader.jpg" class="logo"/>
+	
+	
+	
+	
+	<form id="formBooking" name="bookingForm" action="_self">
+	<input id="item_name" name="item_name" type="text" value="6 Lamb Steak">
+	<input id="total_value" name="total_value" type="text" value="150">
+	<button id="customButton">Purchase</button>
+	</form>
+	
+	
+	
+	
+	
+	
+	<div align="center" id="thankyouPayment"></div>
+
+<!-- This is the script that connects the form to StripeCheckout -->
+<!-- Code Section A Grab the booking form and initialise the stripe checkout form -->
+
+    <script>
+    jQuery(function($) {
+      var $form = $('#frmBooking');
+      var handler = StripeCheckout.configure({
+        key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+        token: function(token) {
+          // Use the token to create the charge with a server-side script.
+          // You can access the token ID with `token.id`
+
+          //This will be printed when the transaction is successful. To charge, server side scripting is required.
+          if(token.id){
+                    $("#thankyouPayment").html("Thank you for ypur purchase, your payment was successful!");
+                    
+                    //You can also use the following code to re-submit the form content to another file for further processing.
+                    //Don't forget to add action to your form
+                    //$form.get(0).submit();
+
+                    //Or save form data locally, using local storage.
+          }
+        }
+      });
+	  
+
+      $('#customButton').on('click', function(e) {
+        // Code Section B  Open Checkout with further options
+        handler.open({
+          name: 'Epicure',
+          currency: 'gbp',
+          description: $('#item_name').val(),
+          amount: $('#total_value').val() * 100
+        });
+        e.preventDefault();
+      });
+
+      // Code Section C  Close Checkout on page navigation
+      $(window).on('popstate', function() {
+        handler.close();
+      });
+      });
+    </script>
+	
+	</div>
+		
+    
+  
+</body>
+	
+
+	
+            <footer data-role="footer" data-position="fixed">	
+	
+			<h4>&copy; Copyright 2020 Epicure</footer>
+
+		
+			<h4>
+	</footer>
+	
+	
+</html>

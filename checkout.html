@@ -2,11 +2,13 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles.POI.css">
 	<link rel="stylesheet" href="themes/123.css" />
     <link rel="stylesheet" href="themes\jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-	<link rel="stylesheet" href="styles.basket.css">
+    <link rel="stylesheet" href="styles.checkout.css">
+    <script src="https://checkout.stripe.com/checkout.js"> </script>
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
@@ -18,21 +20,90 @@
 			<a href="#">Home</a>
 			<a href="#">Search</a>
 			<a href="#">Profile</a>
-			<a href="#">Favourites</a>
+			<a rel="external" href="./favourites.html">Favourites</a>
+			<a rel="external" href="./basket.html">Basket</a>
 		</div>
 		<div id="main">
 			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 		</div>
     </nav>
     
-    <div class="basket">
-        <h2 class="basket-title">Your Basket</h2>
-        <div id="basket-item-container">
-
+    <div class="checkout">
+        <div class="delivery-details box">
+            <h3 class="delivery-details-title">Delivery details
+                <img src="./themes/images/icons-png/navigation-black.png"/>
+            </h3>
+            <p>50 Vauxhall Avenue</p>
         </div>
-        <button class="basket-checkout">Checkout</button>
+        <div class="order-summary box">
+            <h3 class="delivery-details-title">Order summary
+                <img src="./themes/images/icons-png/shop-black.png"/>
+            </h3>
+            <a rel="external" href="./basket.html">
+                <p>View basket</p>
+            </a>
+            <ul id="order-summary-list" class="order-summary-list">
+
+            </ul>
+            <hr />
+            <div class="checkout-total-container">
+                <h4 class="checkout-total-text">Total: </h4>
+                <p id="checkout-total" class="checkout-total">0</p>
+            </div>
+        </div>
+        <div class="payment box">
+            <h3 class="delivery-details-title">Payment
+            <i class="fa fa-credit-card" aria-hidden="true"></i>
+            </h3>
+            <form id="formBooking" name="bookingForm" action="_self">
+                <input id="item_name" name="item_name" type="text" value="to Heybot LTD">
+                <input id="total_value" name="total_value" type="text">
+                <button id="customButton">Purchase</button>
+            </form>
+            <div id="thankyouPayment"></div>
+        </div>
     </div>
 </body>
 <script src="./POI.js"></script>
-<script src="./basket.js"></script>
+<script src="./checkout.js"></script>
+<script>
+    jQuery(function($) {
+      var $form = $('#frmBooking');
+      var handler = StripeCheckout.configure({
+        key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+        token: function(token) {
+          // Use the token to create the charge with a server-side script.
+          // You can access the token ID with `token.id`
+
+          //This will be printed when the transaction is successful. To charge, server side scripting is required.
+          if(token.id){
+                    $("#thankyouPayment").html("Thank you for ypur purchase, your payment was successful!");
+                    
+                    //You can also use the following code to re-submit the form content to another file for further processing.
+                    //Don't forget to add action to your form
+                    //$form.get(0).submit();
+
+                    //Or save form data locally, using local storage.
+          }
+        }
+      });
+	  
+
+      $('#customButton').on('click', function(e) {
+        // Code Section B  Open Checkout with further options
+        handler.open({
+          name: 'Epicure',
+          currency: 'gbp',
+          description: $('#item_name').val(),
+          amount: $('#total_value').val() * 100
+        });
+        e.preventDefault();
+      });
+
+      // Code Section C  Close Checkout on page navigation
+      $(window).on('popstate', function() {
+        handler.close();
+      });
+      });
+    </script>
 </html>
