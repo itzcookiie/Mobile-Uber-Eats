@@ -10,6 +10,18 @@
     display: flex;
 }
 
+#favourites-container {
+    padding: 15px;
+}
+
+#favourites-item-container {
+    padding: 15px;
+}
+
+.favourite-options {
+    padding: 15px;
+}
+
 .food-image, .food-details {
     flex: 1;
 }

@@ -3,9 +3,9 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="styles.POI.css">
-	<link rel="stylesheet" href="themes/123.css" />
-    <link rel="stylesheet" href="themes\jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../styles.POI.css">
+	<link rel="stylesheet" href="../themes/123.css" />
+    <link rel="stylesheet" href="../themes\jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 	<link rel="stylesheet" href="styles.basket.css">
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -19,7 +19,7 @@
 			<a rel="external" href="#">Home</a>
 			<a rel="external" href="#">Search</a>
 			<a rel="external" href="#">Profile</a>
-			<a rel="external" href="./favourites.html">Favourites</a>
+			<a rel="external" href="../favourites.html">Favourites</a>
 			<a rel="external" href="#">Basket</a>
 		</div>
 		<div id="main">
@@ -28,8 +28,9 @@
     </nav>
     
     <div class="basket">
-		<h2 class="basket-title">Your Basket</h2>
-		<button class="clear-button">Clear</button>
+		<h2 class="basket-title">Your Basket
+			<button class="ui-btn ui-btn-inline clear-button">Clear</button>
+		</h2>
 		
         <div id="basket-item-container">
 
@@ -39,10 +40,10 @@
             <p class="basket-total">0</p>
         </div>
 	</div>
-	<a rel="external" href="./checkout.html">
+	<a rel="external" href="../checkout.html">
 		<button class="basket-checkout">Checkout</button>
 	</a>
 </body>
-<script src="./POI.js"></script>
+<script src="../POI.js"></script>
 <script src="./basket.js"></script>
 </html>

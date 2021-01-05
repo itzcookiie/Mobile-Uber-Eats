@@ -19,11 +19,11 @@
 			<a rel="external" href="#">Search</a>
 			<a rel="external" href="#">Profile</a>
 			<a rel="external" href="./favourites.html">Favourites</a>
-			<a rel="external" href="./basket.html">Basket</a>
+			<a rel="external" href="./basket/basket.html">Basket</a>
 		</div>
 		<div id="main">
 			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-			<a rel="external" href="./basket.html">
+			<a rel="external" href="./basket/basket.html">
 				<img class="basket-logo" src="./themes/images/icons-png/shop-black.png" />
 			</a>
 		</div>
@@ -128,8 +128,10 @@
 			<p>olive oil, red chilli, ginger, garlic, apple juice, white wine vinegar, Dijon mustard, soy sauce, brown sugar</p>
 			<br><br>
 			<h4>Calories: 600</h4>
-			<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-basket">Add to basket</button>
-			<button class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow add-to-favourites">Add to favourites</button>
+			<a href="#positionWindow" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-rel="popup" data-position-to="window">Add to basket</a>
+			<div data-role="popup" id="positionWindow" class="ui-content" data-theme="a">
+			<p>Added to basket</p>
+			</div>
 		</div>
 	</div>
 

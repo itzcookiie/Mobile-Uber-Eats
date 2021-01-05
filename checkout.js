@@ -10,14 +10,14 @@ function displayBasket(event) {
     if(getBasket) {
         const parsedBasket = JSON.parse(getBasket);
         parsedBasket.forEach(basketItem => {
-            sum += +basketItem.price;
+            sum += +basketItem.price * +basketItem.quantity;
             const basketItemElement = document.createElement('li');
             let basketDetails = document.createElement('div');
             basketDetails.classList.add('checkout-list-details');
             basketDetails.innerHTML = 
             `
                 <p>${basketItem.food}</p>
-                <p>£${basketItem.price}</p>
+                <p>£${basketItem.price}  x${basketItem.quantity}  </p>
             `
             basketItemElement.appendChild(basketDetails);
             orderSummaryList.appendChild(basketItemElement);

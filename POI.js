@@ -33,6 +33,7 @@ function favouriteItem(event) {
 }
 
 function addToBasket(event) {
+    console.log('hoo')
     const storedBasket = localStorage.getItem('basket')
     const parsedBasket = storedBasket ? JSON.parse(storedBasket) : [];
     const parentDiv = event.target.parentNode;

@@ -13,10 +13,12 @@
 
 .basket-item {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .basket-food {
-    flex: 1;
+    flex: 10;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,4 +45,18 @@
     display: flex;
     font-size: 20px;
     justify-content: space-between;
+}
+
+.basket-quantity {
+    flex: 2;
+    height: 30px;
+    background-color: #ababab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-quantity button{
+    height: 100%;
+    width: 100%;
 }

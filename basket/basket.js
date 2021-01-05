@@ -19,18 +19,9 @@ function displayBasketItems() {
             basketItemDiv.innerHTML = 
             `
             <div class="basket-quantity">
-            <form>
-            <div class="ui-field-contain">
-                <label for="select-native-1">Qty: </label>
-                <select name="select-native-1" id="select-native-1">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            </form>
+                <button>
+                    <strong>${basketItem.quantity}</strong>
+                </button>
             </div>
             <div class="basket-food">
                 <p>${basketItem.food}</p>
@@ -39,8 +30,6 @@ function displayBasketItems() {
                 <p>£${basketItem.price * basketItem.quantity}</p>
             </div>
             `
-            const quantity = basketItemDiv.querySelector(`option[value="${basketItem.quantity}"]`)
-            quantity.setAttribute('selected', '');
             basketItemContainer.appendChild(basketItemDiv);
             const hrElement = document.createElement('hr');
             basketItemContainer.appendChild(hrElement);
@@ -51,4 +40,5 @@ function displayBasketItems() {
 
 function clear() {
     localStorage.removeItem('basket');
+    window.location.href = '../POI-1.html'
 }

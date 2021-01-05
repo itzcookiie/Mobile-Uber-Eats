@@ -4,12 +4,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.POI.css">
-	<link rel="stylesheet" href="styles.favourites.css">
 	<link rel="stylesheet" href="themes/123.css" />
 	<link rel="stylesheet" href="themes\jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="styles.favourites.css">
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -20,22 +21,39 @@
 			<a rel="external" href="#">Search</a>
 			<a rel="external" href="#">Profile</a>
 			<a rel="external" href="#">Favourites</a>
-			<a rel="external" href="./basket.html">Basket</a>
+			<a rel="external" href="./basket/basket.html">Basket</a>
 		</div>
 		<div id="main">
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-            <a rel="external" href="./basket.html">
+            <a rel="external" href="./basket/basket.html">
 				<img class="basket-logo" src="./themes/images/icons-png/shop-black.png" />
 			</a>
 		</div>
     </nav>
     
-    <h2>Your Favourites</h2>
-    <button class="clear-button">Clear</button>
+
 
     <div id="favourites-container">
-        
+        <h2>Your Favourites</h2>
+        <div class="favourite-options">
+            <button class="ui-btn ui-corner-all ui-shadow ui-btn-inline clear-button">Clear</button>
+            <a id="email-btn" href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop">Email favourites</a>
+        </div>
     </div>
+    <div id="favourites-item-container"></div>
+    <div id="email-popup" data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+        <form id="email-form" data-ajax="false">
+            <div style="padding:10px 20px;">
+                <h3>Send your favourites by email!</h3>
+                <p>When email is sent, a tick will appear next to the 'email favourites' button</p>
+                <label for="email" class="ui-hidden-accessible">Email:</label>
+                <input minlength="5" type="email" name="email" id="email" value="" placeholder="Enter your email address..." data-theme="a" required>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a send-email-btn">Send email</button>
+            </div>
+        </form>
+    </div>
+
+</div>
 	<!-- FOOOD----------------------------------------------------------------------------------------------------------------------->
 
 	<!-- FOOOD----------------------------------------------------------------------------------------------------------------------->
